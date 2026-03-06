@@ -1,0 +1,16 @@
+
+
+Browse "http://localhost:3000/#/test3"
+Wait 1 secs
+
+Click "Add Test"
+Input "Project Name"
+Input "Test Case Name"
+Select "Test Type"
+Input "Test Module"
+Select "Priority"
+Select "Environment"
+Select "Browser"
+Input "Description"
+Click "Submit Test"
+Wait 2 secs
