@@ -59,6 +59,14 @@ So: **locators are not written by the user; they are implied by the strategy ord
    npx playwright install chromium
    ```
 
+### Pre setup before running
+
+1. Create a Test Case file that describes a UI behavior.
+2. A sample Test Case file is present here [`create test`](tests/create_test2.txt). This is a Test Case used for the TestAutomation App (https://github.com/ravimaharjan/TestAutomation-app)
+3. Labels like "Add Test", "Test Case Name" etc should match the Text visible in Screen.
+4. Prepare Excel data with column names matching the labels. Sample Excel is provided in sample data folder.
+
+
 ### Running a Test
 
 Use the **run** command with a **testcase** and a **data** file (e.g. Excel for input values). The CLI will:
@@ -89,5 +97,3 @@ node src/cli.js run --testcase=tests/create_test2.txt --data=tests/data.xlsx
 - **Wait N secs** – pause for N seconds.
 
 **Data file (Excel):** Use column headers that **match the label names** in the testcase file (e.g. a step `Input "Project Name"` gets its value from the Excel column named `Project Name`). The first row of data is used for binding.
-
-Labels are the **visible or accessible names** (e.g. button text, input labels). The **discovery-resolver** (`src/discovery-resolver.js`) decides how to find the element at runtime using its strategy list.
